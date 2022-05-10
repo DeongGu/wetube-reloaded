@@ -1,0 +1,9 @@
+extends base.pug
+include mixins/video
+
+block content 
+    h2 환영합니다. 인기 급상승 동영상들이 있습니다.
+    each video in videos 
+       +video(video)
+    else 
+        li 미안합니다. 찾을 수 없습니다.
